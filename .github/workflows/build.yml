@@ -14,5 +14,5 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: omarchy-iso-${{ github.run_number }}
-          path: out/*.iso
+          path: /out/*.iso
           retention-days: 30
