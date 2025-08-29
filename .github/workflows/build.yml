@@ -9,7 +9,7 @@ jobs:
       - name: Make the script files executable
         run: chmod +x bin/omarchy-iso-make
       - name: Run the script
-        run: ./bin/omarchy-iso-make --no-boot-offer && ls -lah
+        run: ./bin/omarchy-iso-make --no-boot-offer && ls -lah /out/
       - name: Upload ISO artifact
         uses: actions/upload-artifact@v4
         with:
