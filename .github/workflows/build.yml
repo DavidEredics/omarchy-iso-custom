@@ -6,8 +6,10 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: bash -c "
+            ls -lah \
             chmod +x bin/omarchy-iso-make && \
-            ./bin/omarchy-iso-make"
+            ./bin/omarchy-iso-make \
+            ls -lah"
       - name: Upload ISO artifact
         uses: actions/upload-artifact@v4
         with:
