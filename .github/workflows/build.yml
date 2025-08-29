@@ -4,12 +4,12 @@ jobs:
   build-iso:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - run: bash -c "
-            ls -lah && \
-            chmod +x bin/omarchy-iso-make && \
-            ./bin/omarchy-iso-make && \
-            ls -lah"
+      - name: Check out the repository to the runner
+        uses: actions/checkout@v4
+      - name: Make the script files executable
+        run: chmod +x bin/omarchy-iso-make
+      - name: Run the script
+        run: ./bin/omarchy-iso-make && ls -lah
       - name: Upload ISO artifact
         uses: actions/upload-artifact@v4
         with:
