@@ -16,3 +16,8 @@ jobs:
           name: omarchy-iso-${{ github.run_number }}
           path: release/*.iso
           retention-days: 30
+      - name: Release
+        uses: softprops/action-gh-release@v2
+        if: github.ref == 'refs/heads/main'
+        with:
+          files: release/*.iso
