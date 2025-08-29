@@ -6,10 +6,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: bash -c "
-            pacman -Syu --noconfirm && \
             chmod +x bin/omarchy-iso-make && \
-            ./bin/omarchy-iso-make
-          "
+            ./bin/omarchy-iso-make"
       - name: Upload ISO artifact
         uses: actions/upload-artifact@v4
         with:
