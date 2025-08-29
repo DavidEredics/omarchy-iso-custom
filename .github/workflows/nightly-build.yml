@@ -24,8 +24,8 @@ jobs:
       run: |
           bash -c "
             pacman -Syu --noconfirm && \
-            chmod +x build_iso.sh && \
-            ./build_iso.sh
+            chmod +x bin/omarchy-iso-make && \
+            ./bin/omarchy-iso-make
           "
     
     - name: Upload ISO artifact
