@@ -1,5 +1,5 @@
-1password-beta
-1password-cli
+# 1password-beta
+# 1password-cli
 alacritty
 base
 base-devel
@@ -92,9 +92,9 @@ power-profiles-daemon
 python-terminaltexteffects
 ripgrep
 satty
-signal-desktop
+# signal-desktop
 slurp
-spotify
+# spotify
 sushi
 swaybg
 swayosd
@@ -126,7 +126,7 @@ xournalpp
 yaru-icon-theme
 yay
 yay-debug
-zoom
+# zoom
 zoxide
 zram-generator
 webp-pixbuf-loader
