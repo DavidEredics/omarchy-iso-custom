@@ -9,7 +9,7 @@ jobs:
       - name: Make the script files executable
         run: chmod +x bin/omarchy-iso-make
       - name: Run the script
-        run: ./bin/omarchy-iso-make --no-boot-offer && for f in release/*.iso; do mv "$f" "${f%.iso}_${{ github.run_number }}.iso"; done
+        run: ./bin/omarchy-iso-make --no-boot-offer
       - name: Upload ISO artifact
         uses: actions/upload-artifact@v4
         with:
@@ -21,4 +21,4 @@ jobs:
         if: github.ref == 'refs/heads/main'
         with:
           files: release/*.iso
-          tag_name: main
+          tag_name: ${{ github.event.repository.updated_at}}-${{ github.run_number }}
