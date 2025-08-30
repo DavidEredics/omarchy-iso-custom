@@ -22,6 +22,6 @@ jobs:
         with:
           files: release/*.iso
           tag_name: main
-          name: ${{ github.event.repository.updated_at}}-{{ github.run_number }}
-          body: {{ github.event.repository.updated_at}}
+          name: ${{ github.event.repository.updated_at}}-${{ github.run_number }}
+          body: ${{ github.event.repository.updated_at}}
           make_latest: true
