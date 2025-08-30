@@ -21,4 +21,7 @@ jobs:
         if: github.ref == 'refs/heads/main'
         with:
           files: release/*.iso
-          tag_name: ${{ github.event.repository.updated_at}}-${{ github.run_number }}
+          tag_name: main
+          name: ${{ github.event.repository.updated_at}}-{{ github.run_number }}
+          body: {{ github.event.repository.updated_at}}
+          make_latest: true
