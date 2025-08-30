@@ -18,12 +18,9 @@ grim
 xorg-server
 xorg-xinit
 mesa
-xf86-video-amdgpu
-xf86-video-ati
 xf86-video-nouveau
 libva-mesa-driver
 libva-intel-driver
-vulkan-radeon
 vulkan-intel
 vulkan-nouveau
 sddm
